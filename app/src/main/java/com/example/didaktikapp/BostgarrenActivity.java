@@ -58,7 +58,17 @@ public class BostgarrenActivity extends AppCompatActivity
 
         if (requestCode == 1 && resultCode == RESULT_OK )
         {
-            //VÍDEO TERMINADO, HACER MÁS COSAS
+            MediaPlayer mp=new MediaPlayer();
+            try{
+                mp.setDataSource("/sdcard/Music/maine.mp3");//Write your location here
+                mp.prepare();
+                mp.start();
+
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
         }
     }
 }
