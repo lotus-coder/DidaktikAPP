@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DidaktikAPP">
-        <activity android:name=".BostgarrenActivity"></activity>
+        <activity android:name=".BostgarrenGalderak"></activity>
+        <activity android:name=".BostgarrenActivity" />
         <activity android:name=".LehenengoTexto" />
         <activity android:name=".LehenengoActivity" />
         <activity android:name=".MainActivity">
