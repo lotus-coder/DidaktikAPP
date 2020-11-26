@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -44,19 +45,16 @@ public class BostgarrenActivity extends AppCompatActivity
         });
     }
 
+    public void butAudioListener(View view)
+    {
+        iniciarVideoMarierrota();
+    }
+
     private void iniciarVideoMarierrota()
     {
         String url = "https://www.youtubetrimmer.com/view/?v=VyGwC4gH-DA&end=194";
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        BostgarrenActivity.this.startActivityForResult(intent,1);
-    }
-
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == 1 && resultCode == RESULT_OK )
-            iniciarAudioMarierrota();
+        startActivity(intent);
     }
 
     private void iniciarAudioMarierrota()
