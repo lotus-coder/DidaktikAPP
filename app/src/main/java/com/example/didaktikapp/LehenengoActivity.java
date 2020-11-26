@@ -16,7 +16,7 @@ public class LehenengoActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_lehenengo);
-            VideoView videoView =(VideoView)findViewById(R.id.videoView);
+            VideoView videoView =(VideoView)findViewById(R.id.bostgarren_videoView);
 
             //Creating MediaController
             MediaController mediaController= new MediaController(this);
