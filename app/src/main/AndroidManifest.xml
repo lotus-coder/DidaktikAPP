@@ -13,8 +13,9 @@
         android:theme="@style/Theme.DidaktikAPP">
         <activity android:name=".BostgarrenActivity"></activity>
         <activity android:name=".LehenengoTexto" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".LehenengoActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SopaLetras">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -2,6 +2,7 @@ package com.example.didaktikapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +28,8 @@ public class LehenengoTexto extends AppCompatActivity {
         btnHurrengoa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(LehenengoTexto.this,SopaLetras.class);
+                startActivity(i);
             }
         });
     }
