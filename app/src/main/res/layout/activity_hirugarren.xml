@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HirugarrenActivity">
-    tools:context=".LehenengoActivity">
 
     <VideoView
-        android:id="@+id/bostgarren_videoView"
+        android:id="@+id/vvHirugarren"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
