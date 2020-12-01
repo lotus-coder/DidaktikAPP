@@ -8,7 +8,7 @@
     tools:context=".LehenengoActivity">
 
     <VideoView
-        android:id="@+id/bostgarren_videoView"
+        android:id="@+id/vvLehenego"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
