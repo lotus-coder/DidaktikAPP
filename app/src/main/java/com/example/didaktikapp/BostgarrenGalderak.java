@@ -41,7 +41,7 @@ public class BostgarrenGalderak extends AppCompatActivity
             rg2ID != -1 &&
             rg3ID != -1 &&
             rg3ID != -1 &&
-            rg3ID != -1)
+            rg3ID != -1 )
         {
             RadioButton rbGaldera1Erantzuna = (RadioButton) findViewById(rg1ID);
             RadioButton rbGaldera2Erantzuna = (RadioButton) findViewById(rg2ID);
@@ -59,6 +59,11 @@ public class BostgarrenGalderak extends AppCompatActivity
             if(indexRG1 == 1)
             {
                 rbGaldera1Erantzuna.setTextColor(Color.GREEN);
+                for (int child = 0; child < radioGroup1.getChildCount(); child++)
+                {
+                    if(child != indexRG1)
+                        radioGroup1.getChildAt(child).setEnabled(false);
+                }
             }
             else
             {
@@ -70,6 +75,11 @@ public class BostgarrenGalderak extends AppCompatActivity
             if(indexRG2 == 0)
             {
                 rbGaldera2Erantzuna.setTextColor(Color.GREEN);
+                for (int child = 0; child < radioGroup2.getChildCount(); child++)
+                {
+                    if(child != indexRG2)
+                        radioGroup2.getChildAt(child).setEnabled(false);
+                }
             }
             else
             {
@@ -81,6 +91,11 @@ public class BostgarrenGalderak extends AppCompatActivity
             if(indexRG3 == 2)
             {
                 rbGaldera3Erantzuna.setTextColor(Color.GREEN);
+                for (int child = 0; child < radioGroup3.getChildCount(); child++)
+                {
+                    if(child != indexRG3)
+                        radioGroup3.getChildAt(child).setEnabled(false);
+                }
             }
             else
             {
@@ -92,6 +107,11 @@ public class BostgarrenGalderak extends AppCompatActivity
             if(indexRG4 == 0)
             {
                 rbGaldera4Erantzuna.setTextColor(Color.GREEN);
+                for (int child = 0; child < radioGroup4.getChildCount(); child++)
+                {
+                    if(child != indexRG4)
+                        radioGroup4.getChildAt(child).setEnabled(false);
+                }
             }
             else
             {
@@ -103,6 +123,11 @@ public class BostgarrenGalderak extends AppCompatActivity
             if(indexRG5 == 2)
             {
                 rbGaldera5Erantzuna.setTextColor(Color.GREEN);
+                for (int child = 0; child < radioGroup5.getChildCount(); child++)
+                {
+                    if(child != indexRG5)
+                        radioGroup5.getChildAt(child).setEnabled(false);
+                }
             }
             else
             {
@@ -128,10 +153,5 @@ public class BostgarrenGalderak extends AppCompatActivity
             //IMPLEMENTAR UN DIALOG QUE AVISE AL USUARIO DE QUE NO
             //HA RESPONDIDO A TODAS LAS PREGUNTAS
         }
-    }
-
-    public void butItxiListener(View view)
-    {
-        finish();
     }
 }

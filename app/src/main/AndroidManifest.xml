@@ -17,6 +17,7 @@
         <activity android:name=".LehenengoTexto" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LehenengoActivity" />
+        <activity android:name=".BostgarrenGalderak" />
         <activity android:name=".BostgarrenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

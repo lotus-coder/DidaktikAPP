@@ -25,7 +25,6 @@ public class BostgarrenActivity extends AppCompatActivity
 
         iniciarVideoMarierrota();
 
-        //Preparar el video view
         videoView = findViewById(R.id.bostgarren_videoView);
         mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);
