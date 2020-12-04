@@ -11,11 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DidaktikAPP">
-        <activity android:name=".BostgarrenGalderak"></activity>
+        <activity android:name=".HirugarrenActivityTestua"></activity>
+        <activity android:name=".SopaLetras" />
         <activity android:name=".BostgarrenActivity" />
         <activity android:name=".LehenengoTexto" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".LehenengoActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".HirugarrenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
