@@ -14,8 +14,256 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:text="Irakurri galderak, eta erantzun bideoan eta azalpenean jaso duzun informazioa erabiliz"
-        android:textColor="#000000"
+        android:textColor="#4E4E4E"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGaldera1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="• Zergatik behar zituzten errotak Lekeitio bezalak kostaldeko herriek? "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvGaldera1"
+        app:layout_constraintStart_toStartOf="@+id/tvGaldera1"
+        app:layout_constraintTop_toBottomOf="@+id/tvGaldera1">
+
+        <RadioButton
+            android:id="@+id/rbGaldera1Erantzun1"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Ura mugitzeko"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbGaldera1Erantzun2"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Laboreak lantzeko"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbGaldera1Erantzun3"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Laboreak saltzeko"
+            android:textSize="12sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvGaldera2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="• Zergatik erabaki zuten marea-errota bat eraikitzea? "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup1"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup1"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvGaldera1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvGaldera1"
+        app:layout_constraintTop_toBottomOf="@+id/tvGaldera2">
+
+        <RadioButton
+            android:id="@+id/rbGaldera2Erantzun1"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:text="Mareen gora-beherak aprobetxatzeko eta lehorteekin arazorik ez izateko."
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbGaldera2Erantzun2"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Mareek garraiatzen zuten ura garbiagoa zelako."
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbGaldera2Erantzun3"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Mareen urak gatza zuelako.  "
+            android:textSize="12sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvGaldera3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="• Eta zergatik jarri zioten “Marierrota” izena? "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvGaldera3"
+        app:layout_constraintStart_toStartOf="@+id/tvGaldera3"
+        app:layout_constraintTop_toBottomOf="@+id/tvGaldera3">
+
+        <RadioButton
+            android:id="@+id/rbGaldera3Erantzun1"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Mari izeneko emakume bat bizi zelako errotan."
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbGaldera3Erantzun2"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Mari izeneko emakume batek eraiki zuelako.  "
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbGaldera3Erantzun3"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Izenak dioen moduan Marea Errota bat delako.  "
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvGaldera4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="• Zein mendetakoa da errota hau?"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvGaldera4"
+        app:layout_constraintStart_toStartOf="@+id/tvGaldera4"
+        app:layout_constraintTop_toBottomOf="@+id/tvGaldera4">
+
+        <RadioButton
+            android:id="@+id/rbGaldera4Erantzun1"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="XVI. mendekoa. "
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbGaldera4Erantzun2"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="XX. mendekoa. "
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbGaldera4Erantzun3"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="V. mendekoa. "
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvGaldera5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="• Gaur egun Euskal Herrian marea errota asko aurkitu daitezke? "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvGaldera5"
+        app:layout_constraintStart_toStartOf="@+id/tvGaldera5"
+        app:layout_constraintTop_toBottomOf="@+id/tvGaldera5">
+
+        <RadioButton
+            android:id="@+id/rbGaldera5Erantzun1"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Bai asko daude Euskal Herrian zehar.  "
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbGaldera5Erantzun2"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Ez dago batere Euskal Herri osoan.  "
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbGaldera5Erantzun3"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Oso gutxi daude Euskal Herrian.  "
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/butBalidatu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="butBalidatuListener"
+        android:text="ERANTZUNAK BALIDATU"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup5" />
+
+    <Button
+        android:id="@+id/butItxi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="butItxiListener"
+        android:text="ITXI"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/butBalidatu"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/butBalidatu"
+        app:layout_constraintTop_toTopOf="@+id/butBalidatu"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

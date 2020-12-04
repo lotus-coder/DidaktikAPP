@@ -13,11 +13,11 @@
         android:theme="@style/Theme.DidaktikAPP">
         <activity android:name=".HirugarrenActivityTestua"></activity>
         <activity android:name=".SopaLetras" />
-        <activity android:name=".BostgarrenActivity" />
+        <activity android:name=".HirugarrenActivity" />
         <activity android:name=".LehenengoTexto" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LehenengoActivity" />
-        <activity android:name=".HirugarrenActivity">
+        <activity android:name=".BostgarrenGalderak">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
