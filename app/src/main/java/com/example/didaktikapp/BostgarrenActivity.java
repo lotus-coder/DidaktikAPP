@@ -22,6 +22,8 @@ public class BostgarrenActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bostgarren);
 
+        iniciarVideoMarierrota();
+
         //Preparar el video view
         videoView = (VideoView)findViewById(R.id.bostgarren_videoView);
         mediaController = new MediaController(this);
@@ -30,8 +32,6 @@ public class BostgarrenActivity extends AppCompatActivity
         tvBostgarren = (TextView)findViewById(R.id.tvBostgarren);
         tvBostgarren.setText("Kostaldeko lurralde gehienetan bezala, Lekeitioko lurrak ere inoiz ez dira izan nekazaritza lantzeko lur onak. Horren ondorioz, laboreak errotetara eraman eta han lantzen zituzten. Baina, XVI. mendean lehorte-garai bat egon zen, eta horren ondorioz erreketan kokatuta zeuden errotek ez zuten funtzionatzen. Hortik, bururatu zitzaien errota hau eraikitzeko ideia; izan ere, errota hau marea-errota bat da. Hau da, marearen gorabeherekin funtzionatzen duen errota, horregatik errotak funtzionatzeko behar duen ura egongo dela bermatuta dago. Marea-errota hau eraikitzea garai hartan oso esanguratsua zen, zaila zelako eraikitzea eta gainera, marea-erroten ideia Europatik zabaldu zelako gurera. Horrez gain, leku horretan zehar ontziak ere ibili ahal ziren, errotarekin zuten komunikazioa ahalbidetuz. Azkenik, aipagarria da gaur egun Euskal Herrian oso gutxi aurkitzen direla.");
         tvBostgarren.setMovementMethod(new ScrollingMovementMethod());
-
-        iniciarVideoMarierrota();
     }
 
     private void iniciarVideoMarierrota()
