@@ -6,37 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".BostgarrenActivity">
 
-    <VideoView
-        android:id="@+id/bostgarren_videoView"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/butAudio"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="AUDIOA"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:onClick="butAudioListener"
+        android:text="AUDIOA"
+        app:layout_constraintBottom_toTopOf="@+id/bostgarren_videoView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bostgarren_videoView" />
+        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvBostgarren"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:text="Kostaldeko lurralde gehienetan bezala, Lekeitioko lurrak ere inoiz ez dira izan nekazaritza lantzeko lur onak. Horren ondorioz, laboreak errotetara eraman eta han lantzen zituzten. Baina, XVI. mendean lehorte-garai bat egon zen, eta horren ondorioz erreketan kokatuta zeuden errotek ez zuten funtzionatzen. Hortik, bururatu zitzaien errota hau eraikitzeko ideia; izan ere, errota hau marea-errota bat da. Hau da, marearen gorabeherekin funtzionatzen duen errota, horregatik errotak funtzionatzeko behar duen ura egongo dela bermatuta dago. Marea-errota hau eraikitzea garai hartan oso esanguratsua zen, zaila zelako eraikitzea eta gainera, marea-erroten ideia Europatik zabaldu zelako gurera. Horrez gain, leku horretan zehar ontziak ere ibili ahal ziren, errotarekin zuten komunikazioa ahalbidetuz. Azkenik, aipagarria da gaur egun Euskal Herrian oso gutxi aurkitzen direla.  "
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/butAudio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <VideoView
+        android:id="@+id/bostgarren_videoView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
