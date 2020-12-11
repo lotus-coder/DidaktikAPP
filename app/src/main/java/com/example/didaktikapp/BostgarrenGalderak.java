@@ -27,6 +27,7 @@ public class BostgarrenGalderak extends AppCompatActivity
         radioGroup4 = (RadioGroup) findViewById(R.id.radioGroup4);
         radioGroup5 = (RadioGroup) findViewById(R.id.radioGroup5);
         butItxi = (Button) findViewById(R.id.butItxi);
+        butItxi.setVisibility(View.INVISIBLE);
     }
 
     public void butBalidatuListener(View view)
@@ -56,6 +57,7 @@ public class BostgarrenGalderak extends AppCompatActivity
             int indexRG5 = radioGroup5.indexOfChild(rbGaldera5Erantzuna);
 
             boolean estanBien = true;
+            System.out.println("HOLA");
             if(indexRG1 == 1)
             {
                 rbGaldera1Erantzuna.setTextColor(Color.GREEN);
@@ -153,5 +155,10 @@ public class BostgarrenGalderak extends AppCompatActivity
             //IMPLEMENTAR UN DIALOG QUE AVISE AL USUARIO DE QUE NO
             //HA RESPONDIDO A TODAS LAS PREGUNTAS
         }
+    }
+
+    public void butItxiListener(View view)
+    {
+        finish();
     }
 }
