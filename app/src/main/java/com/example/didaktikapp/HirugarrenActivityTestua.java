@@ -3,16 +3,19 @@ package com.example.didaktikapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class HirugarrenActivityTestua extends AppCompatActivity {
 
-    TextView txtTestua;
+    private TextView txtTestua;
+    private Button hurrengoa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hirugarren_testua);
+        hurrengoa = findViewById(R.id.btnLaugarren);
         txtTestua = findViewById(R.id.txtHirugarren);
         txtTestua.setText("Ikasi behar dutenaren testua (irakurri eta entzuteko)\n" +
                 "Lekeitioko Isuntza hondartzan kokatuta dagoen haitz bat da. Hemen kondairaren laburpena:\n" +
