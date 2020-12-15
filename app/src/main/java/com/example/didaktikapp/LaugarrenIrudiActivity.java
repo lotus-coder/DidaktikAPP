@@ -29,7 +29,7 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
         img7 = findViewById(R.id.img7);
         img8 = findViewById(R.id.img8);
         img9 = findViewById(R.id.img9);
-/*
+        /*
         gl.removeAllViews();
 */
         img2.setImageResource(R.mipmap.ada);
@@ -37,6 +37,10 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
         img3.setImageResource(R.mipmap.tiburon);
         img4.setImageResource(R.mipmap.canon);
         img5.setImageResource(R.mipmap.pirata);
+        img6.setImageResource(R.mipmap.caserio);
+        img7.setImageResource(R.mipmap.mar);
+        img8.setImageResource(R.mipmap.hospital);
+        img9.setImageResource(R.mipmap.movil);
 /*
         gl.addView(img1);
         gl.addView(img2);
