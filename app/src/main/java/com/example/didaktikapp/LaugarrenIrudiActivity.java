@@ -2,6 +2,8 @@ package com.example.didaktikapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
@@ -16,11 +18,13 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class LaugarrenIrudiActivity extends AppCompatActivity {
 
     private GridLayout gl;
     private ImageView img1,img2,img3,img4,img5,img6,img7,img8,img9;
+    private HashMap<ImageView,Boolean> mapita;
     private int width,height;
     private Button btnCheck;
 
@@ -31,23 +35,34 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
         gl = findViewById(R.id.idGridIrudi);
         gl.setColumnCount(3);
         img1 = findViewById(R.id.img1);
-
+        mapita.put(img1,true);
         img2 = findViewById(R.id.img2);
+        mapita.put(img2,false);
         img3 = findViewById(R.id.img3);
+        mapita.put(img3,false);
         img4 = findViewById(R.id.img4);
+        mapita.put(img4,true);
         img5 = findViewById(R.id.img5);
+        mapita.put(img5,true);
         img6 = findViewById(R.id.img6);
+        mapita.put(img6,true);
         img7 = findViewById(R.id.img7);
+        mapita.put(img7,false);
         img8 = findViewById(R.id.img8);
+        mapita.put(img8,true);
         img9 = findViewById(R.id.img9);
+        mapita.put(img9,false);
 
         btnCheck = findViewById(R.id.btnCheck);
         eventos();
+
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
+
         width = size.x/3;
         height = size.y/4;
+
         img2.setImageResource(R.mipmap.ada);
         ajustaTamanio(img2);
         img1.setImageResource(R.mipmap.camino);
@@ -73,6 +88,38 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
         btnCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Iterator<ImageView> i = mapita.keySet().iterator();
+                int cont = 0;
+                for (Iterator<ImageView> it = i; it.hasNext(); ) {
+                    ImageView im = it.next();
+                    if (im.isSelected() && mapita.get(im)) {
+                        cont++;
+                    }
+                }
+                String cosa;
+                if (cont == 5){
+                    new AlertDialog.Builder(LaugarrenIrudiActivity.this)
+                            .setTitle("Audioa")
+                            .setMessage("Erantzun guztiak ondo daude!")
+
+                            // Specifying a listener allows you to take an action before dismissing the dialog.
+                            // The dialog is automatically dismissed when a dialog button is clicked.
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+                }else{
+                    new AlertDialog.Builder(LaugarrenIrudiActivity.this)
+                            .setTitle("Audioa")
+                            .setMessage("Hasmatu dituzu "+cont+" galdera!")
+
+                            // Specifying a listener allows you to take an action before dismissing the dialog.
+                            // The dialog is automatically dismissed when a dialog button is clicked.
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+                }
 
             }
         });
