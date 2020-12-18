@@ -6,4 +6,183 @@
     android:layout_height="match_parent"
     tools:context=".KomikiActivity">
 
+    <ImageView
+        android:id="@+id/com1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/com2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/com2"
+        app:srcCompat="@mipmap/f_1" />
+
+    <ImageView
+        android:id="@+id/com2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        app:layout_constraintEnd_toStartOf="@+id/com3"
+        app:layout_constraintStart_toEndOf="@+id/com1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/f_2" />
+
+    <ImageView
+        android:id="@+id/com3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/com2"
+        app:layout_constraintTop_toTopOf="@+id/com2"
+        app:srcCompat="@mipmap/f_3" />
+
+    <ImageView
+        android:id="@+id/com4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80sp"
+        app:layout_constraintEnd_toStartOf="@id/com5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/com1"
+        app:srcCompat="@mipmap/f_4" />
+
+    <ImageView
+        android:id="@+id/com5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toStartOf="@+id/com6"
+        app:layout_constraintStart_toEndOf="@+id/com4"
+        app:layout_constraintTop_toTopOf="@+id/com4"
+        app:srcCompat="@mipmap/f_5" />
+
+    <ImageView
+        android:id="@+id/com6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/com5"
+        app:layout_constraintTop_toTopOf="@+id/com5"
+        app:srcCompat="@mipmap/f_6" />
+
+    <ImageView
+        android:id="@+id/com7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/com8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/com8"
+        app:srcCompat="@mipmap/f_7" />
+
+
+    <ImageView
+        android:id="@+id/com8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="com7"
+        app:layout_constraintTop_toBottomOf="@+id/com6"
+        app:srcCompat="@mipmap/f_8" />
+
+    <Button
+        android:id="@+id/botonOrdenaIrudi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:layout_marginTop="60sp"
+        app:layout_constraintEnd_toStartOf="@id/botonReset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt7" />
+
+    <Button
+        android:id="@+id/botonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botonOrdenaIrudi"
+        app:layout_constraintTop_toTopOf="@+id/botonOrdenaIrudi" />
+
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/com1"
+        app:layout_constraintStart_toStartOf="@+id/com1"
+        app:layout_constraintTop_toBottomOf="@+id/com1" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/com2"
+        app:layout_constraintStart_toStartOf="@+id/com2"
+        app:layout_constraintTop_toBottomOf="@+id/com2" />
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/com3"
+        app:layout_constraintStart_toStartOf="@+id/com3"
+        app:layout_constraintTop_toBottomOf="@+id/com3" />
+
+    <TextView
+        android:id="@+id/txt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/com4"
+        app:layout_constraintStart_toStartOf="@+id/com4"
+        app:layout_constraintTop_toBottomOf="@+id/com4" />
+
+    <TextView
+        android:id="@+id/txt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/com5"
+        app:layout_constraintStart_toStartOf="@+id/com5"
+        app:layout_constraintTop_toBottomOf="@+id/com5" />
+
+    <TextView
+        android:id="@+id/txt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/com6"
+        app:layout_constraintStart_toStartOf="@+id/com6"
+        app:layout_constraintTop_toBottomOf="@+id/com6" />
+
+    <TextView
+        android:id="@+id/txt7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/com7"
+        app:layout_constraintStart_toStartOf="@+id/com7"
+        app:layout_constraintTop_toBottomOf="@+id/com7" />
+
+    <TextView
+        android:id="@+id/txt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/com8"
+        app:layout_constraintStart_toStartOf="@+id/com8"
+        app:layout_constraintTop_toBottomOf="@+id/com8" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
