@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DidaktikAPP">
-        <activity android:name=".LaugarrenIrudiActivity"></activity>
+        <activity android:name=".KomikiActivity"></activity>
+        <activity android:name=".LaugarrenIrudiActivity" />
         <activity android:name=".BostgarrenActivity" />
         <activity android:name=".HirugarrenActivityTestua" />
         <activity android:name=".SopaLetras" />
