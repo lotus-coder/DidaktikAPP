@@ -67,8 +67,8 @@
         android:id="@+id/com7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/com4"
         app:layout_constraintEnd_toStartOf="@+id/com8"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/com8"
         app:srcCompat="@mipmap/f_7" />
 
@@ -78,8 +78,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="com7"
+        app:layout_constraintEnd_toEndOf="@+id/com6"
+        app:layout_constraintStart_toEndOf="@+id/com7"
         app:layout_constraintTop_toBottomOf="@+id/com6"
         app:srcCompat="@mipmap/f_8" />
 
@@ -87,7 +87,7 @@
         android:id="@+id/botonOrdenaIrudi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Reset"
         android:layout_marginTop="60sp"
         app:layout_constraintEnd_toStartOf="@id/botonReset"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +97,7 @@
         android:id="@+id/botonReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Check"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonOrdenaIrudi"
         app:layout_constraintTop_toTopOf="@+id/botonOrdenaIrudi" />

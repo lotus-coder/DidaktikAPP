@@ -34,6 +34,7 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_laugarren_irudi);
         gl = findViewById(R.id.idGridIrudi);
         gl.setColumnCount(3);
+        mapita = new HashMap<ImageView, Boolean>();
         img1 = findViewById(R.id.img1);
         mapita.put(img1,true);
         img2 = findViewById(R.id.img2);
