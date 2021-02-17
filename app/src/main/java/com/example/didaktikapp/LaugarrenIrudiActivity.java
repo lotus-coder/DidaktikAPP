@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -27,6 +29,7 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
     private HashMap<ImageView,Boolean> mapita;
     private int width,height;
     private Button btnCheck;
+    private AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +58,7 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
         mapita.put(img9,false);
 
         btnCheck = findViewById(R.id.btnCheck);
-        eventos();
-
+        builder = new AlertDialog.Builder(this);
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
@@ -82,6 +84,7 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
         ajustaTamanio(img8);
         img9.setImageResource(R.mipmap.movil);
         ajustaTamanio(img9);
+        eventos();
 
     }
 
@@ -97,31 +100,33 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
                         cont++;
                     }
                 }
-                String cosa;
+                String textoDialogo = "";
                 if (cont == 5){
-                    new AlertDialog.Builder(LaugarrenIrudiActivity.this)
-                            .setTitle("Audioa")
-                            .setMessage("Erantzun guztiak ondo daude!")
-
-                            // Specifying a listener allows you to take an action before dismissing the dialog.
-                            // The dialog is automatically dismissed when a dialog button is clicked.
-                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                }
-                            });
+                    textoDialogo = "Erantzun guztiak ondo daude!";
                 }else{
-                    new AlertDialog.Builder(LaugarrenIrudiActivity.this)
-                            .setTitle("Audioa")
-                            .setMessage("Hasmatu dituzu "+cont+" galdera!")
-
-                            // Specifying a listener allows you to take an action before dismissing the dialog.
-                            // The dialog is automatically dismissed when a dialog button is clicked.
-                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                }
-                            });
+                    textoDialogo = "Hasmatu dituzu "+cont+" galdera!";
                 }
-
+                builder.setTitle("Audioa").setMessage(textoDialogo+"\nNahi duzu hurrengo gunera joatea?")
+                        .setCancelable(false)
+                        .setPositiveButton("Bai", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Intent i = new Intent(LaugarrenIrudiActivity.this,BostgarrenActivity.class);
+                                /*Toast.makeText(getApplicationContext(),"you choose yes action for alertbox",
+                                        Toast.LENGTH_SHORT).show();*/
+                                startActivity(i);
+                            }
+                        })
+                        .setNegativeButton("Ez", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                                deselecionameEsto();
+                                Toast.makeText(getApplicationContext(),"Zahiatu berriro!",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.setTitle("AlertDialogExample");
+                alert.show();
             }
         });
         img1.setOnClickListener(new View.OnClickListener() {
@@ -233,7 +238,26 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
             }
         });
     }
-
+    private void deselecionameEsto(){
+        img1.setSelected(false);
+        img2.setSelected(false);
+        img3.setSelected(false);
+        img4.setSelected(false);
+        img5.setSelected(false);
+        img6.setSelected(false);
+        img7.setSelected(false);
+        img8.setSelected(false);
+        img9.setSelected(false);
+        img1.setBackgroundColor(Color.TRANSPARENT);
+        img2.setBackgroundColor(Color.TRANSPARENT);
+        img3.setBackgroundColor(Color.TRANSPARENT);
+        img4.setBackgroundColor(Color.TRANSPARENT);
+        img5.setBackgroundColor(Color.TRANSPARENT);
+        img6.setBackgroundColor(Color.TRANSPARENT);
+        img7.setBackgroundColor(Color.TRANSPARENT);
+        img8.setBackgroundColor(Color.TRANSPARENT);
+        img9.setBackgroundColor(Color.TRANSPARENT);
+    }
     private void ajustaTamanio(ImageView img){
         img.getLayoutParams().height = height;
         img.getLayoutParams().width = width;

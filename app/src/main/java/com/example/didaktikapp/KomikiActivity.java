@@ -76,16 +76,16 @@ public class KomikiActivity extends AppCompatActivity {
 
     }
     public class Klik implements View.OnClickListener {
-
         private TextView t;
         public Klik(TextView t){
             this.t = t;
         }
-
         @Override
         public void onClick(View v) {
-            t.setText(cont+"");
-            cont++;
+            if(t.getText().toString().equals("")){
+                t.setText(cont + "");
+                cont++;
+            }
         }
     }
 }

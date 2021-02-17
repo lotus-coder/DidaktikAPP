@@ -1,14 +1,19 @@
 package com.example.didaktikapp;
-import android.app.Dialog;import android.content.Context;import android.content.DialogInterface;import android.os.Bundle;import android.util.Log;import androidx.annotation.NonNull;import androidx.annotation.Nullable;import androidx.appcompat.app.AlertDialog;import androidx.fragment.app.DialogFragment;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
-public class DialogoConfirmacion extends DialogFragment{
+public class DialogoConfirmacion extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
-
-        builder.setMessage("¿Confirma la acciónseleccionada?")
+        builder.setMessage("¿Confirma la acción seleccionada?")
                 .setTitle("Confirmación")
                 .setPositiveButton("ACEPTAR", new DialogInterface.OnClickListener() {
             @Override

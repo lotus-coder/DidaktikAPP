@@ -87,7 +87,7 @@
         android:id="@+id/botonOrdenaIrudi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset"
+        android:text="Check"
         android:layout_marginTop="60sp"
         app:layout_constraintEnd_toStartOf="@id/botonReset"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +97,7 @@
         android:id="@+id/botonReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Check"
+        android:text="Berriro Hazi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonOrdenaIrudi"
         app:layout_constraintTop_toTopOf="@+id/botonOrdenaIrudi" />
