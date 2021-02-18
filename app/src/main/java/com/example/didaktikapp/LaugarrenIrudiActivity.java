@@ -85,7 +85,6 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
         img9.setImageResource(R.mipmap.movil);
         ajustaTamanio(img9);
         eventos();
-
     }
 
     private void eventos() {
