@@ -28,7 +28,7 @@ public class LehenengoTexto extends AppCompatActivity {
         btnHurrengoa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(LehenengoTexto.this,SopaLetras.class);
+                Intent i = new Intent(LehenengoTexto.this,MapsActivity.class);
                 startActivity(i);
             }
         });

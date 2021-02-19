@@ -26,6 +26,7 @@ public class LaugarrenActivity extends AppCompatActivity {
                 " bi jarri zituzten islaren tontorrean, herria babesteko piraten eta bikingoengandik. Gaur egun, ez"+
                 " dago orain aipatutako eraikinaren arrastorik. Horrez gain, orain dela urte asko Lepra pandemia bat"+
                 " ere egon zen. Eta bertan, ospitale bat egin zuten gaixoak bertara joateko eta herrikoak ez kutsatzeko.");
+        testua.setPadding(20,0,20,0);
         btnHurrengoa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,4 +35,10 @@ public class LaugarrenActivity extends AppCompatActivity {
             }
         });
     }
+
+/*    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(LaugarrenActivity.this,LaugarrenIrudiActivity.class);
+        startActivity(i);
+    }*/
 }

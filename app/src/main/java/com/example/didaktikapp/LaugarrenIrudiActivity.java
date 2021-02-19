@@ -109,7 +109,7 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
                         .setCancelable(false)
                         .setPositiveButton("Bai", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                Intent i = new Intent(LaugarrenIrudiActivity.this,BostgarrenActivity.class);
+                                Intent i = new Intent(LaugarrenIrudiActivity.this,MapsActivity.class);
                                 /*Toast.makeText(getApplicationContext(),"you choose yes action for alertbox",
                                         Toast.LENGTH_SHORT).show();*/
                                 startActivity(i);
@@ -262,4 +262,8 @@ public class LaugarrenIrudiActivity extends AppCompatActivity {
         img.getLayoutParams().width = width;
         img.requestLayout();
     }
+/*    public void onBackPressed() {
+        Intent i = new Intent(LaugarrenIrudiActivity.this,MapsActivity.class);
+        startActivity(i);
+    }*/
 }

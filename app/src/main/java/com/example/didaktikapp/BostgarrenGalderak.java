@@ -1,5 +1,9 @@
 package com.example.didaktikapp;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -14,20 +18,28 @@ public class BostgarrenGalderak extends AppCompatActivity
     private RadioGroup radioGroup3;
     private RadioGroup radioGroup4;
     private RadioGroup radioGroup5;
-    private Button butItxi;
+    private Button butItxi,btnErantzun;
+    private AlertDialog.Builder builder;
 
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bostgarren_galderak);
-
         radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
+        builder = new AlertDialog.Builder(this);
         radioGroup2 = (RadioGroup) findViewById(R.id.radioGroup2);
         radioGroup3 = (RadioGroup) findViewById(R.id.radioGroup3);
         radioGroup4 = (RadioGroup) findViewById(R.id.radioGroup4);
         radioGroup5 = (RadioGroup) findViewById(R.id.radioGroup5);
         butItxi = (Button) findViewById(R.id.butItxi);
         butItxi.setVisibility(View.INVISIBLE);
+        btnErantzun = (Button) findViewById(R.id.butBalidatu);
+        btnErantzun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                butBalidatuListener(v);
+            }
+        });
     }
 
     public void butBalidatuListener(View view)
@@ -140,20 +152,43 @@ public class BostgarrenGalderak extends AppCompatActivity
 
             if(estanBien == true)
             {
-                //IMPLEMENTAR UN DIALOG QUE AVISE AL USUARIO DE QUE
-                //NO HA COMETIDO ERRORES
-                butItxi.setVisibility(View.VISIBLE);
+                builder.setTitle("Bukatu duzu").setMessage("Oso ondo galdera guztiak ondo erantzun dituzu!")
+                        .setCancelable(false)
+                        .setPositiveButton("Lets Go !", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Intent i = new Intent(BostgarrenGalderak.this,MapsActivity.class);
+                                /*Toast.makeText(getApplicationContext(),"you choose yes action for alertbox",
+                                        Toast.LENGTH_SHORT).show();*/
+                                startActivity(i);
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
             else
             {
-                //IMPLEMENTAR UN DIALOG QUE AVISE AL USUARIO DE QUE
-                //HA COMETIDO ERRORES
+                builder.setTitle("Bukatu duzu").setMessage("Oso ondo galdera batzuk ondo erantzun dituzu!")
+                        .setCancelable(false)
+                        .setPositiveButton("Lets Go !", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Intent i = new Intent(BostgarrenGalderak.this,MapsActivity.class);
+                                /*Toast.makeText(getApplicationContext(),"you choose yes action for alertbox",
+                                        Toast.LENGTH_SHORT).show();*/
+                                startActivity(i);
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         }
         else
         {
-            //IMPLEMENTAR UN DIALOG QUE AVISE AL USUARIO DE QUE NO
-            //HA RESPONDIDO A TODAS LAS PREGUNTAS
+            builder.setTitle("Ez duzu bukatu").setMessage("Ez duzu bukatu erantzunten !")
+                .setCancelable(false)
+                .setPositiveButton("Lets Go !", null
+                );
+            AlertDialog alert = builder.create();
+            alert.show();
         }
     }
 

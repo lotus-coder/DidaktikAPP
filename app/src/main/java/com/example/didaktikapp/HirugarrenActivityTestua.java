@@ -2,7 +2,9 @@ package com.example.didaktikapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -31,5 +33,13 @@ public class HirugarrenActivityTestua extends AppCompatActivity {
                 " 90 urte bete zituenean, berriz egin zuen topo hasierako gizon berarekin. Momentu horretan, gizonak buruan" +
                 " ukitu eta arrantzalea harri bihurtu zuen. Momentu hartatik aurrera, Lekeitio herriari hainbeste poztasun" +
                 " eman zizkion arrantzalea Isuntza hondartzan dago harri bihurututa: aittitta makurra.");
+        txtTestua.setPadding(20,0,20,0);
+        hurrengoa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(HirugarrenActivityTestua.this,KomikiActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
